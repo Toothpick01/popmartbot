@@ -1,0 +1,11 @@
+services:
+  - type: background_worker
+    name: popmartbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python popmartbot.py
+    envVars:
+      - key: GOLOGIN_TOKEN
+        value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Nzg2MWZjOWQ2NDc1ZGZlMzZmMmZjYTMiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2Nzg2MjE5NTNiMDViNjgzZGJkMjE2MDQifQ._WmMUpkTsGOZGvcO_uuMhHb6rWM3gyS702K90x4GdUM"
+      - key: PROFILE_ID
+        value: "67861fcad6475dfe36f2fd47"
